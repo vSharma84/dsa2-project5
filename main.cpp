@@ -1,7 +1,45 @@
-#include "LCSProgram.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include "LCSSolver.h"
+#include "SimilarityTable.h"
 
-int main() {
-    LCSProgram program;
-    program.run();
+using namespace std;
+
+int main()
+{
+    cout << "=============================" << endl;
+    cout << "  PART 1: Two-String LCS" << endl;
+    cout << "=============================" << endl;
+
+    ifstream fin("twoStrings.txt");
+    if (!fin)
+    {
+        cerr << "Error: cannot open twoStrings.txt" << endl;
+        return 1;
+    }
+
+    string X, Y;
+    getline(fin, X);
+    getline(fin, Y);
+    fin.close();
+
+    cout << "String 1 (length " << X.size() << "):" << endl;
+    cout << X << endl << endl;
+
+    cout << "String 2 (length " << Y.size() << "):" << endl;
+    cout << Y << endl << endl;
+
+    LCSSolver solver;
+    string lcs = solver.lcsFullTable(X, Y);
+
+    cout << "LCS (length " << lcs.size() << "):" << endl;
+    cout << lcs << endl << endl;
+
+    cout << endl;
+
+    SimilarityTable table;
+    table.run("multiStrings.txt");
+
     return 0;
 }
