@@ -1,3 +1,10 @@
+/***************************************************************
+  Student Name: Vansh Sharma
+  File Name: LCSSolver.h
+  Assignment number: 5
+
+ Declares the LCSSolver class and its functions for computing LCS.
+***************************************************************/
 #ifndef LCSSOLVER_H
 #define LCSSOLVER_H
 

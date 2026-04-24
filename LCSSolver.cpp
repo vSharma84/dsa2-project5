@@ -1,3 +1,11 @@
+/***************************************************************
+  Student Name: Vansh Sharma
+  File Name: LCSSolver.cpp
+  Assignment number: 5
+
+ Implements LCS algorithms using full DP and a 2-row optimized 
+ approach.
+***************************************************************/
 #include "LCSSolver.h"
 #include <algorithm>
 

@@ -1,3 +1,10 @@
+/***************************************************************
+  Student Name: Vansh Sharma
+  File Name: main.cpp
+  Assignment number: 5
+
+ Runs the program by computing LCS and generating the similarity table.
+ ***************************************************************/
 #include <iostream>
 #include <fstream>
 #include <string>

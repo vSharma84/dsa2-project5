@@ -1,3 +1,10 @@
+/***************************************************************
+  Student Name: Vansh Sharma
+  File Name: SimilarityTable.cpp
+  Assignment number: 5
+
+ Builds and prints a similarity table using LCS-based comparisons.
+ ***************************************************************/
 #include "SimilarityTable.h"
 #include <iostream>
 #include <iomanip>
