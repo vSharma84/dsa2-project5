@@ -11,6 +11,15 @@
 
 using namespace std;
 
+/***************************************************************
+ * Function: lcsFullTable
+ * Computes the LCS of two strings using a full DP table and
+ * returns the subsequence.
+ *
+ * Parameters: X - first string, Y - second string
+ *
+ * Returns: LCS string
+ ***************************************************************/
 string LCSSolver::lcsFullTable(const string &X, const string &Y)
 {
     int m = (int)X.size();
@@ -50,6 +59,14 @@ string LCSSolver::lcsFullTable(const string &X, const string &Y)
     return lcs;
 }
 
+/***************************************************************
+ * Function: lcsLength2Row
+ * Computes the length of the LCS using a 2-row DP approach.
+ *
+ * Parameters:X - first string, Y - second string
+ *
+ * Returns: LCS length
+ ***************************************************************/
 int LCSSolver::lcsLength2Row(const string &X, const string &Y)
 {
     int m = (int)X.size();

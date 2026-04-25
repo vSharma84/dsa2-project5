@@ -11,6 +11,12 @@
 
 using namespace std;
 
+/***************************************************************
+ * Function: run
+ * Reads input and controls building and printing the table.
+ *
+ * Parameters: filename - input file name
+ ***************************************************************/
 void SimilarityTable::run(const string &filename)
 {
     ifstream fin(filename.c_str());
@@ -27,12 +33,17 @@ void SimilarityTable::run(const string &filename)
     cout << "=============================" << endl;
     cout << "  PART 2: Similarity Table" << endl;
     cout << "=============================" << endl;
-    cout << "Number of strings: " << n << endl << endl;
 
     buildIndex(filename, n);
     printTable(filename, n);
 }
 
+/***************************************************************
+ * Function: buildIndex
+ * Stores file positions for each string for direct access.
+ *
+ * Parameters:filename - input file name, numStrings - number of strings
+ ***************************************************************/
 void SimilarityTable::buildIndex(const string &filename, int numStrings)
 {
     ifstream fin(filename.c_str());
@@ -48,6 +59,12 @@ void SimilarityTable::buildIndex(const string &filename, int numStrings)
     fin.close();
 }
 
+/***************************************************************
+ * Function: getStringAt
+ * Returns a string from the file using its index.
+ *
+ * Parameters:filename - input file name, index - string index
+ ***************************************************************/
 string SimilarityTable::getStringAt(const string &filename, int index)
 {
     ifstream fin(filename.c_str());
@@ -58,6 +75,12 @@ string SimilarityTable::getStringAt(const string &filename, int index)
     return line;
 }
 
+/***************************************************************
+ * Function: getRating
+ * Determines similarity (H, M, L, D) between two strings.
+ *
+ * Parameters:A - first string, B - second string
+ ***************************************************************/
 char SimilarityTable::getRating(const string &A, const string &B)
 {
     int lenA = (int)A.size();
@@ -85,6 +108,12 @@ char SimilarityTable::getRating(const string &A, const string &B)
     return 'D';
 }
 
+/***************************************************************
+ * Function: printTable
+ * Prints the similarity table for all strings.
+ *
+ * Parameters:filename - input file name, numStrings - number of strings
+ ***************************************************************/
 void SimilarityTable::printTable(const string &filename, int numStrings)
 {
     cout << "   ";

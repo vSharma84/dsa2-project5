@@ -13,6 +13,10 @@
 
 using namespace std;
 
+/***************************************************************
+ * Function: main
+ * Runs the program: computes LCS and prints similarity table.
+ ***************************************************************/
 int main()
 {
     cout << "=============================" << endl;
@@ -31,10 +35,10 @@ int main()
     getline(fin, Y);
     fin.close();
 
-    cout << "String 1 (length " << X.size() << "):" << endl;
+    cout << "String 1:" << endl;
     cout << X << endl << endl;
 
-    cout << "String 2 (length " << Y.size() << "):" << endl;
+    cout << "String 2:" << endl;
     cout << Y << endl << endl;
 
     LCSSolver solver;
